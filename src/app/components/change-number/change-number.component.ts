@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
+ 
 @Component({
   selector: 'app-change-number',
   standalone: true,
@@ -8,12 +8,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './change-number.component.css'
 })
 export class ChangeNumberComponent {
-  @Output() changeNumber: EventEmitter<any> = new EventEmitter(); // comunica ao componente pai que um evento ocorreu e que 
+  @Output() changeNumber: EventEmitter<any> = new EventEmitter(); // comunica ao componente pai que um evento ocorreu e que
                                                                   // esse componente pai deve tratar as ações
-
+ 
   handleClick() {
     this.changeNumber.emit(); // emite evento ao componente dependente
     // this: faz referencia a variavel interna
   }
-
+ 
 }
