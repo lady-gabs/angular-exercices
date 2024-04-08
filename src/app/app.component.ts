@@ -8,6 +8,9 @@ import { EventosComponent } from "./components/eventos/eventos.component";
 import { EmitterComponent } from "./components/emitter/emitter.component";
 import { ListRenderComponent } from "./components/list-render/list-render.component";
 import { PipesComponent } from "./components/pipes/pipes.component";
+import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
+import { RoutesModule } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -15,7 +18,8 @@ import { PipesComponent } from "./components/pipes/pipes.component";
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [RouterOutlet, FirstComponentComponent, ParentDataComponent, DirectivesComponent, 
-      IfRenderComponent, EventosComponent, EmitterComponent, ListRenderComponent, PipesComponent]
+      IfRenderComponent, EventosComponent, EmitterComponent, ListRenderComponent, PipesComponent,
+      TwoWayBindingComponent, RoutesModule, HttpClientModule]
 })
 export class AppComponent {
   userName = 'Fulano';
